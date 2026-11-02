@@ -1,0 +1,150 @@
+extends ../layouts/default.pug
+
+
+block main 
+  .section-11
+    .container
+      .inner-wrap
+        .inner-head
+          .inner-title Giỏ Hàng
+          a.inner-back(href="#")
+            | Quay lại mua hàng
+            i.fa-solid.fa-angle-right
+        .inner-tour-list
+          .inner-tour-item
+            .inner-actions
+              button.inner-delete
+                i.fa-solid.fa-xmark
+              input.inner-check(type="checkbox")
+            .inner-product
+              .inner-image
+                a(href="#")
+                  img(
+                    src="/assets/images/banner-16.png" 
+                    alt=""
+                    )
+              .inner-content
+                .inner-title
+                  a(href="#") Tour Châu Âu Đón Noel | 11N10D | Pháp – Thụy Sĩ – Ý
+                .inner-meta
+                  .inner-meta-item
+                    | Mã Tour:
+                    b 123456789
+                  .inner-meta-item
+                    | Ngày Khởi Hành:
+                    b 20/10/2024
+                  .inner-meta-item
+                    | Khởi Hành Tại:
+                    b Hà Nội
+            .inner-quantity
+              label.inner-label Số Lượng Hành Khách
+              .inner-list
+                .inner-item
+                  .inner-item-label Người lớn:
+                  .inner-item-input
+                    input(
+                      type="number" 
+                      min="0" 
+                      value="1"
+                      )
+                  .inner-item-price
+                    span 1
+                    span x
+                    span.inner-highlight 10.000.000
+                .inner-item
+                  .inner-item-label Trẻ em:
+                  .inner-item-input
+                    input(
+                      type="number" 
+                      min="0" 
+                      value="0"
+                      )
+                  .inner-item-price
+                    span 0
+                    span x
+                    span.inner-highlight 7.990.000
+                .inner-item
+                  .inner-item-label Em bé:
+                  .inner-item-input
+                    input(
+                      type="number" 
+                      min="0" 
+                      value="0"
+                      )
+                  .inner-item-price
+                    span 0
+                    span x
+                    span.inner-highlight 5.990.000
+        .inner-coupon
+          form#coupon-form(action="")
+            input#coupon-input(
+              type="text" 
+              placeholder="Nhập mã giảm giá" 
+              name="coupon"
+              )
+            button(type="submit") Dùng Mã
+        .inner-list-price
+          .inner-item
+            .inner-label Tổng tiền:
+            .inner-price 15.070.000 đ
+          .inner-item
+            .inner-label Giảm:
+            .inner-price -5.070.000 đ
+          .inner-item
+            .inner-label Thanh toán:
+            .inner-price-highlight 17.070.000 đ
+  .section-12
+    .container
+      .inner-wrap
+        form#order-form(action="")
+          .inner-info
+            .inner-title-main Thông Tin Khách Hàng
+            .inner-inputs
+              .inner-input
+                input#full-name-input(
+                  type="text" 
+                  name="fullName" 
+                  placeholder="Họ và tên"
+                  )
+              .inner-input
+                input#phone-input(
+                  type="text" 
+                  name="phone" 
+                  placeholder="Số điện thoại"
+                  )
+            textarea(
+              name="note" 
+              placeholder="Ghi chú"
+              )
+          .inner-method
+            .inner-title-main Chọn phương thức thanh toán
+            .inner-list
+              .inner-item
+                input#methodMoney(
+                  type="radio" 
+                  name="method" 
+                  value="money" 
+                  checked=""
+                  )
+                label(for="methodMoney") Thanh toán tiền mặt khi đi tour
+              .inner-item
+                input#methodMomo(
+                  type="radio" 
+                  name="method" 
+                  value="momo"
+                  )
+                label(for="methodMomo") Ví MoMo
+              .inner-item
+                input#methodBank(
+                  type="radio" 
+                  name="method" 
+                  value="bank"
+                  )
+                label(for="methodBank") Chuyển khoản ngân hàng
+            .inner-info-bank
+              .inner-title Thông tin chuyển khoản
+              .inner-text Ngân hàng : Vietcombank
+              .inner-text Tên tài khoản: Le Van A
+              .inner-text STK: 0123456789
+          .inner-button
+            button(type="submit") ĐẶT TOUR
